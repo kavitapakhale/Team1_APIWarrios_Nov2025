@@ -18,7 +18,7 @@
 							"});\r",
 							"var jsonData = pm.response.json();\r",
 							"if (jsonData.token) {\r",
-							"    pm.collectionVariables.set(\"bearer_token\", jsonData.token);\r",
+							"    pm.environment.set(\"bearer_token\", jsonData.token);\r",
 							"}"
 						],
 						"type": "text/javascript",
@@ -131,8 +131,8 @@
 							"if(jsonData)\r",
 							"{\r",
 							"    console.log(jsonData.user.userId);\r",
-							"    pm.collectionVariables.set(\"userId\",jsonData.user.userId);\r",
-							"    console.log(pm.collectionVariables.get(\"userId\"));\r",
+							"    pm.environment.set(\"userId\",jsonData.user.userId);\r",
+							"    console.log(pm.environment.get(\"userId\"));\r",
 							"}\r",
 							"\r",
 							""
@@ -871,32 +871,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "baseUrl",
-			"value": ""
-		},
-		{
-			"key": "userLoginEmailId",
-			"value": ""
-		},
-		{
-			"key": "password",
-			"value": ""
-		},
-		{
-			"key": "userId",
-			"value": ""
-		},
-		{
-			"key": "batchId",
-			"value": ""
-		},
-		{
-			"key": "bearer_token",
-			"value": ""
 		}
 	]
 }
